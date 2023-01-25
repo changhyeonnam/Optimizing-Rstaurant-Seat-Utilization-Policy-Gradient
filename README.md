@@ -78,7 +78,7 @@ State, Action, Reward를 정하기 전에 Real world를 고려한 손님과 자�
 
 좌석에 배치되어 식사를 하고 있는 손님과 n명이 기다리고 있는 waiting list에 대한 discreste image로 현재 state를 표현하였다. 실제 프로그램에서는 손님마다 다른 색을 사용하여 각 손님을 식별 가능하게 하였다.
 
-![Untitled 5](https://i.imgur.com/MmzrXx9.png)
+![Untitled 5](https://i.imgur.com/c89lmCx.png)
 
 위의 형태와 같은 Fixed state representation으로 State를 표현하게 되면, Convoluitional Neural Network(CNN)의 입력으로 넣을 수 있게된다.
 
