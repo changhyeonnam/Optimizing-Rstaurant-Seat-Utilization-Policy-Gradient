@@ -96,7 +96,7 @@ State, Action, Reward를 정하기 전에 Real world를 고려한 손님과 자�
 
     $n_{t,i}$ : 현재 timestep에서 식사 하고 있는 i명의 단체손님의 개수.
 
-    $P_t$ $={\sum_{i=1}^4 i *{b_i\over t_i}*n_{t,i}}$
+    $$P_t={\sum_{i=1}^4 i *{b_i\over t_i}*n_{t,i}}$$
 
 2. 단위 시간당 빈자리로 인한 손해 (Cost, C라고 표현)
 
@@ -110,12 +110,12 @@ State, Action, Reward를 정하기 전에 Real world를 고려한 손님과 자�
 
     $e_t$ : 현재 timestep t에서의 빈자리 개수
 
-    $C_t = ({{\sum_{i=1}^4i*{b_i\over t_i}*n_i}) /( \sum_{i=1}^4 i* n_i}) *e_t$
+    $$C_t = ({{\sum_{i=1}^4i*{b_i\over t_i}*n_i}) /( \sum_{i=1}^4 i* n_i}) *e_t$$
 
 
 위에서 정의한 $R_t,C_t$를 이용하여 다음과 같이 보상함수를 정의 하였다.
 
-$r_t(s_t,a_t,s'_t) = P_t-0.5*C_t$
+$$r_t(s_t,a_t,s'_t) = P_t-0.5*C_t$$
 
 이때 단위시간당 들어오는 수익을 손해보다 좀더 우선시 하기 위해, Cost에 0.5를 곱해주었다. 우리가 원하는 누적 경제적이득을 최대화 하기 위해, Discount Factor $\gamma=1$로 가정하였다.
 
