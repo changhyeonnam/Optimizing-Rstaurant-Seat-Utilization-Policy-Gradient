@@ -123,7 +123,7 @@ $r_t(s_t,a_t,s'_t) = P_t-0.5*C_t$
 
 Deep Learning을 사용하는 강화학습 알고리즘 중 하나인 REINFORCE 알고리즘을 사용하였다. 기본적으로 episodic setting에서 강화학습을 적용하였다. 매 episode마다 n개의 손님으로 이루어져 있는 팀이 들어오고, policy에 의해 어떤 팀들이 식당에 배치될지 정해지고, 모든 손님이 식사를 끝 맞추면 Episode가 종료되게 된다. REINFOCE 알고리즘의 대표적인 단점은 graident estimate에 있어서 높은 variance가 있다는 것이다. 이를 위해 $v_t$에 baseline값을 빼주는 방식으로 사용하는 방법이 자주 사용되어, 우리도 이 방법을 적용하였다. 다음은 pseudo code이다.
 
-![Screen Shot 2023-01-25 at 2.51.56 PM](https://i.imgur.com/XPHyirXm.png)
+![Screen Shot 2023-01-25 at 2.51.56 PM](https://i.imgur.com/XPHyirXl.png)
 
 앞서 언급한 Gradient estiamte에서의 high variance 문제를 해결한 Proximal Policy Optimization을 적용한다면 보다 좋은 성능의 알고리즘을 설계할 수 있을 것이라 생각한다.
 
