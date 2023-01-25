@@ -110,7 +110,7 @@ State, Action, Reward를 정하기 전에 Real world를 고려한 손님과 자�
 
     $e_t$ : 현재 timestep t에서의 빈자리 개수
 
-$$ C_t = {{\sum_{i=1}^4i\cdot{b_i\over t_i}\cdot{n_i}} \over{\sum_{i=1}^4 i\cdot n_i \cdot e_t}} $$
+$$ C_t = {{\sum_{i=1}^4 i\cdot{b_i\over t_i}\cdot{n_i}} / {\sum_{i=1}^4 i\cdot n_i \cdot e_t}} $$
 
 
 위에서 정의한 $R_t,C_t$를 이용하여 다음과 같이 보상함수를 정의 하였다.
