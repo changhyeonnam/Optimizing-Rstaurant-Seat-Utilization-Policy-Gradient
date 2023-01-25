@@ -12,7 +12,6 @@
 
 ( 현재 환경에 대해 시뮬레이션 하는 코드까지 완료된 상태이면, 추후 강화학습을 적용해보려한다. [https://github.com/changhyeonnam/Optimizing-Rstaurant-Seat-Utilization-Policy-Gradient](https://github.com/changhyeonnam/Optimizing-Rstaurant-Seat-Utilization-Policy-Gradient))
 
----
 
 # 2. Assumptions
 
@@ -68,7 +67,6 @@ State, Action, Reward를 정하기 전에 Real world를 고려한 손님과 자�
 
 실제 세계에 적용하기 위해서는 사용하지 못하는 구역을 지정해주면 될 것같다. 현재는 가장 단순하게 5x5 grid를 모두 사용하는 방법으로 결정하였다.
 
----
 
 # 3. Method
 
@@ -125,17 +123,15 @@ $r_t(s_t,a_t,s'_t) = P_t-0.5*C_t$
 
 Deep Learning을 사용하는 강화학습 알고리즘 중 하나인 REINFORCE 알고리즘을 사용하였다. 기본적으로 episodic setting에서 강화학습을 적용하였다. 매 episode마다 n개의 손님으로 이루어져 있는 팀이 들어오고, policy에 의해 어떤 팀들이 식당에 배치될지 정해지고, 모든 손님이 식사를 끝 맞추면 Episode가 종료되게 된다. REINFOCE 알고리즘의 대표적인 단점은 graident estimate에 있어서 높은 variance가 있다는 것이다. 이를 위해 $v_t$에 baseline값을 빼주는 방식으로 사용하는 방법이 자주 사용되어, 우리도 이 방법을 적용하였다. 다음은 pseudo code이다.
 
-![Screen Shot 2023-01-25 at 2.51.56 PM](https://i.imgur.com/XPHyirX.png)
+![Screen Shot 2023-01-25 at 2.51.56 PM](https://i.imgur.com/XPHyirXm.png)
 
 앞서 언급한 Gradient estiamte에서의 high variance 문제를 해결한 Proximal Policy Optimization을 적용한다면 보다 좋은 성능의 알고리즘을 설계할 수 있을 것이라 생각한다.
 
----
 
 # 4. Benefits
 
 손님 분포를 각 가게의 특성에 맞게 다르게 조절해서 개별화된 실험환경을 구축할 수 있다. 그로부터 현재 들어오는 손님분포에 변화를 주어, 보다 이상적인 손님 분포에 가까워지게끔 마케팅 전략을 구축할 수 있다. 또한 대략적인 계산을 통해 혼밥 손님을 받을지 안받을지를 정하기보다도 보상함수를 비롯한 강화학습의 결과를 바탕으로 데이터에 근거한 결정을 내릴 수 있을 것이다. 더나아가 어떤 배치가 가장 최적의 이득을 낼 수 있는지 알아봄으로써 가게 입장에서는 혼밥 손님을 놓치면서 얻지 못할 뻔 했던 잠재적 수익을 가져갈 수 있고, 혼밥하는 손님 입장에서도 더 많은 식당에서 밥을 먹을 수 있는 기회를 얻을 수 있다.
 
----
 
 # 5. Reference
 
