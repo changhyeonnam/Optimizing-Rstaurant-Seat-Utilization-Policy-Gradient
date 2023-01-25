@@ -134,7 +134,7 @@ Deep Learning을 사용하는 강화학습 알고리즘 중 하나인 REINFORCE 
 
 # 6. Member
 - [Changhyeon Nam](https://github.com/changhyeonnam)
-- [Lee Yongkyun](https://github.com/ComFromBehind)
+- [Yongkyun Lee](https://github.com/ComFromBehind)
 
 # 5. Reference
 
