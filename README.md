@@ -10,7 +10,7 @@
 
 우리는 식당 측에서 가장 많은 경제적 이득을 낼 수 있는 자리 배치와 손님 스케줄링 방법을 찾기 위해 강화학습을 적용 하였다. Real world의 식당에서의 손님 분포를 고려하여, 몇명의 손님인지, 순서는 어떻게 되는지, 비용은 얼마나 걸리는지 등을 가정하였다. 먼저, 강화학습을 적용하기 전에 해야할 몇가지 가정을 설명하고, Markov Decision Process와 관련한 setting을 설명하겠다. 그 다음 RL 알고리즘을 어떻게 적용했고, 어떤 결과를 기대하는지 설명하겠다.
 
-( 현재 환경에 대해 시뮬레이션 하는 코드까지 완료된 상태이면, 추후 강화학습을 적용해보려한다. [https://github.com/changhyeonnam/Optimizing-Rstaurant-Seat-Utilization-Policy-Gradient](https://github.com/changhyeonnam/Optimizing-Rstaurant-Seat-Utilization-Policy-Gradient))
+( 현재 환경에 대해 시뮬레이션 하는 코드까지 완료된 상태이면, 추후 강화학습을 적용해보려한다. 
 
 
 # 2. Assumptions
